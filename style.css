@@ -26,6 +26,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    z-index: 1;
 }
 
 .horizontal-scroll-container {
@@ -101,6 +103,10 @@ body {
     width: 100%;
 }
 
+.image-container {
+    position: relative;
+}
+
 .cursor-circle {
     position: fixed;
     top: 0;
@@ -122,4 +128,32 @@ body {
 .horizontal-scroll-wrapper {
     position: relative;
     z-index: 1;
+}
+
+.image-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Start scaled down */
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Only opacity transitions via CSS */
+    pointer-events: none; /* Prevent interaction unless visible */
+    z-index: 100;
+}
+
+.image-container:hover .image-link {
+    opacity: 1; /* Fully visible */
+    transform: translate(-50%, -50%) scale(1); /* Pop up to normal size (GSAP will override translate) */
+    pointer-events: auto; /* Enable clicking */
+}
+
+.scroll-item:hover .cursor-circle {
+    transform: translate(-50%, -50%) scale(1.5); /* Enlarge cursor circle */
 }

@@ -44,6 +44,7 @@ body {
     justify-content: center;
     position: relative;
 }
+
 .scroll-item:nth-child(1) {
     align-items: start;
 }
@@ -59,42 +60,55 @@ body {
 .scroll-item:nth-child(4) {
     align-items: end;
 }
+
 .scroll-item:nth-child(5) {
     align-items: start;
 }
+
 .scroll-item:nth-child(6) {
     align-items: center;
 }
+
 .scroll-item:nth-child(7) {
     align-items: start;
 }
+
 .scroll-item:nth-child(8) {
     align-items: end;
 }
+
 .scroll-item:nth-child(9) {
     align-items: center;
 }
+
 .scroll-item:nth-child(10) {
     align-items: end;
 }
+
 .scroll-item:nth-child(11) {
     align-items: start;
 }
+
 .scroll-item:nth-child(12) {
     align-items: center;
 }
+
 .scroll-item:nth-child(13) {
     align-items: start;
 }
+
 .scroll-item:nth-child(14) {
     align-items: end;
 }
+
 .scroll-item:nth-child(15) {
     align-items: center;
 }
+
 .scroll-item:nth-child(16) {
     align-items: end;
 }
+
 .scroll-item:nth-child(17) {
     align-items: start;
 }
@@ -105,6 +119,15 @@ body {
 
 .image-container {
     position: relative;
+}
+
+.image-caption {
+    width: 100%;
+    text-align: start;
+    color: white;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .cursor-circle {
@@ -134,7 +157,8 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0); /* Start scaled down */
+    transform: translate(-50%, -50%) scale(0);
+    /* Start scaled down */
     padding: 10px 20px;
     background-color: rgba(255, 255, 255, 0.9);
     color: #000;
@@ -142,18 +166,25 @@ body {
     font-size: 1.2rem;
     font-weight: bold;
     border-radius: 50px;
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.3s ease; /* Only opacity transitions via CSS */
-    pointer-events: none; /* Prevent interaction unless visible */
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease;
+    /* Only opacity transitions via CSS */
+    pointer-events: none;
+    /* Prevent interaction unless visible */
     z-index: 100;
 }
 
 .image-container:hover .image-link {
-    opacity: 1; /* Fully visible */
-    transform: translate(-50%, -50%) scale(1); /* Pop up to normal size (GSAP will override translate) */
-    pointer-events: auto; /* Enable clicking */
+    opacity: 1;
+    /* Fully visible */
+    transform: translate(-50%, -50%) scale(1);
+    /* Pop up to normal size (GSAP will override translate) */
+    pointer-events: auto;
+    /* Enable clicking */
 }
 
 .scroll-item:hover .cursor-circle {
-    transform: translate(-50%, -50%) scale(1.5); /* Enlarge cursor circle */
+    transform: translate(-50%, -50%) scale(1.5);
+    /* Enlarge cursor circle */
 }

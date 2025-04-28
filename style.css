@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     overflow-x: hidden;
-    background-color: black;
+    background-color: #fff;
 }
 
 .vertical-section {
@@ -115,6 +115,7 @@ body {
 
 .scroll-item img {
     width: 100%;
+    aspect-ratio: 16/9;
 }
 
 .image-container {
@@ -124,7 +125,7 @@ body {
 .image-caption {
     width: 100%;
     text-align: start;
-    color: white;
+    color: #000;
     margin-top: 10px;
     font-size: 1rem;
     font-weight: 500;
